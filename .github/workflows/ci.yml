@@ -1,0 +1,29 @@
+name: CI/CD
+
+on:
+  push:
+    branches-ignore:
+      - 'no-ga/**'
+    tags:
+      - 'v*'
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches-ignore:
+      - 'no-ga/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint_and_style:
+    name: Lint HTML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: W3C HTML5 Validator
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        with:
+          root: '.'
