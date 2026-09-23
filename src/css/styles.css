@@ -1,7 +1,11 @@
+:root {
+    --color-background: #FDF8D4;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #FDF8D4;
+    background-color: var(--color-background);
 }
 
 nav.navigation {
@@ -11,10 +15,10 @@ nav.navigation {
     top: 0;
     left: 0;
     z-index: 100;
-    padding: 0 24px; 
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;     
+    align-items: center;
     box-sizing: border-box;
     background-color: transparent;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -36,8 +40,8 @@ a {
 }
 
 .nav-gif {
-    height: 80px; 
-    width: auto;             
+    height: 80px;
+    width: auto;
 }
 
 .menu-container, .nav-spacer {
@@ -56,7 +60,7 @@ a {
     user-select: none;
     display: flex;
     align-items: center;
-    padding: 0; 
+    padding: 0;
     height: 70px;
 }
 
@@ -86,6 +90,10 @@ a {
 
 .menu-links a:hover {
     background-color: #332f33;
+}
+
+.menu-links a.active {
+    border-left: 5px solid #d65a31;
 }
 
 .menu-checkbox:checked ~ .menu-links {
