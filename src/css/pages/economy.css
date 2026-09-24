@@ -1,12 +1,11 @@
 body {
-    background: #fdf8d4;
-    color: #1d1d1d;
+    color: white;
     font-family: sans-serif;
 }
 
 h1, h2, h3 {
     margin: 0 0 14px;
-    color: #1d1d1d;
+    color: white;
     font-weight: 700;
 }
 
@@ -22,7 +21,7 @@ h1, h2, h3 {
 }
 
 .eyebrow {
-    color: #5e4d2d;
+    color: white;
     font-weight: 700;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -75,7 +74,7 @@ h1, h2, h3 {
     min-height: 140px;
     border: 1px dashed rgba(0, 0, 0, .2);
     border-radius: 16px;
-    color: #7a7a7a;
+    color: white;
     text-transform: uppercase;
 }
 

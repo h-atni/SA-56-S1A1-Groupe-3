@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen" href="./css/styles.css">
+    <link rel="stylesheet" media="screen" href="./css/pages/projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icone/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icone/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icone/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icone/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icone/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icone/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icone/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icone/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icone/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icone/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icone/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icone/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icone/favicon-16x16.png">
+    <link rel="manifest" href="./icone/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Projets</title>
+</head>
+
+<body>
+    <nav class="navigation">
+        <div class="menu-container">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-button">=</label>
+
+            <div class="menu-links">
+                <a href="index.html">Accueil</a>
+                <a href="presentation.html">Présentation</a>
+                <a href="economy.html">Economie</a>
+                <a href="projets.html" class="active">Realisations</a>
+                <a href="team.html">Forticher</a>
+            </div>
+        </div>
+        <img src="./assets/fortiche_blanc.gif" alt="Logo fortiche" class="nav-gif">
+        <div class="nav-spacer"></div>
+    </nav>
+    <div class="carousel" id="carousel">
+
+        <div class="carousel-track" id="track">
+
+            <div class="slide">
+                Projet 1
+            </div>
+
+            <div class="slide">
+                Projet 2
+            </div>
+
+            <div class="slide">
+                Projet 3
+            </div>
+
+            <div class="slide">
+                Projet 4
+            </div>
+
+        </div>
+
+        <button class="arrow prev" onclick="moveSlide(-1)" aria-label="Projet précédent">
+            &#10094;
+        </button>
+
+        <button class="arrow next" onclick="moveSlide(1)" aria-label="Projet suivant">
+            &#10095;
+        </button>
+        <div class="dots" id="dots"></div>
+
+    </div>
+
+    <script>
+        const track = document.getElementById('track');
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dots');
+
+        let index = 0;
+        let autoplayInterval;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('dot');
+            if (i === 0) {
+                dot.classList.add('active');
+            }
+            dot.addEventListener('click', () => {
+                goToSlide(i);
+            });
+            dotsContainer.appendChild(dot);
+        });
+        const dots = document.querySelectorAll('.dot');
+        function updateSlide() {
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            dots[index].classList.add('active');
+        }
+        function moveSlide(direction) {
+            index =
+                (index + direction + slides.length)
+                % slides.length;
+            updateSlide();
+            resetAutoplay();
+        }
+        function goToSlide(i) {
+            index = i;
+            updateSlide();
+            resetAutoplay();
+        }
+        function startAutoplay() {
+            autoplayInterval = setInterval(() => {
+                moveSlide(1);
+            }, 4000);
+        }
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        }
+        startAutoplay();
+    </script>
+    <footer>
+        <p>Hicham Atni</p>
+    </footer>
+
+</body>
+</html>
