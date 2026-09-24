@@ -28,38 +28,25 @@
 
 <body>
 
-    <nav class="navbar">
+    <nav class="navigation">
+        <div class="menu-container">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-button">=</label>
 
-        <div class="burger">
-
-            <input type="checkbox" id="menu-toggle">
-
-            <label for="menu-toggle" class="burger-button">
-                ☰
-            </label>
-
-            <div class="menu">
-
-                <label for="menu-toggle" class="close-button">
-                    ✕
-                </label>
-
-                <a href="index.html">Accueil</a>
+            <div class="menu-links">
+                <a href="index.html" >Accueil</a>
                 <a href="presentation.html">Présentation</a>
-                <a href="economy.html">Économie</a>
-                <a href="Projets.html">Réalisations</a>
-                <a href="team.html" class="active">Fortiche</a>
+                <a href="economy.html">Economie</a>
+                <a href="projets.html"  class="active">Realisations</a>
+                <a href="team.html">Forticher</a>
 
             </div>
-
         </div>
 
-        <div class="logo">
-            <img src="./assets/fortiche.gif" alt="Logo Fortiche">
-        </div>
+        <img src="./assets/fortiche_blanc.gif" alt="Logo fortiche" class="nav-gif">
 
-    </nav>
-
+        <div class="nav-spacer"></div>
+        </nav>
     <div class="carousel" id="carousel">
 
         <div class="carousel-track" id="track">
