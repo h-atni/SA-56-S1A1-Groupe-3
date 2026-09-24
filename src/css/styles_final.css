@@ -1,0 +1,376 @@
+/* ============================================
+   VARIABLES + RESET DE BASE
+============================================ */
+:root {
+    --color-background: #FDF8D4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+}
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ============================================
+   NAVBAR (glassmorphisme) - style de l'utilisateur
+   Valable pour les deux structures HTML :
+   - <div class="navbar">      (tes pages)
+   - <nav class="navigation">  (pages des collegues)
+============================================ */
+.navbar,
+nav.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* effet "verre depoli" */
+    background: rgba(20, 23, 25, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* compatibilite Safari */
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+    z-index: 1000; /* toujours au-dessus du reste */
+}
+
+
+/* ============================================
+   BOUTON BURGER
+   .burger / .burger-button  -> tes pages
+   .menu-container / .menu-button -> pages des collegues
+============================================ */
+.burger,
+.menu-container,
+.nav-spacer {
+    width: 120px; /* .nav-spacer garde le logo bien centre cote collegues */
+}
+
+.burger-button,
+.menu-button {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none; /* evite de selectionner le texte au clic */
+}
+
+/* la case a cocher qui pilote l'ouverture est invisible */
+#menu-toggle,
+.menu-checkbox {
+    display: none;
+}
+
+
+/* ============================================
+   MENU DEROULANT - style du collegue
+   .menu       -> tes pages
+   .menu-links -> pages des collegues
+   Ancre a la navbar (position: fixed) : top: 76px
+   le place juste sous la barre.
+============================================ */
+.menu,
+.menu-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 12px;
+
+    width: 220px;
+    padding: 8px 0;
+
+    flex-direction: column;
+
+    background-color: #232023;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    z-index: 10;
+}
+
+.menu a,
+.menu-links a {
+    display: block;
+    padding: 14px 24px;
+
+    font-family: "Permanent Marker", cursive;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+    color: beige;
+}
+
+.menu a:hover,
+.menu-links a:hover {
+    background-color: #332f33;
+}
+
+.menu a.active,
+.menu-links a.active {
+    border-left: 5px solid #d65a31;
+}
+
+/* quand la case cachee est cochee, le menu s'affiche */
+#menu-toggle:checked ~ .menu,
+#menu-toggle:checked ~ .menu-links {
+    display: flex;
+}
+
+/* plus utile avec un menu deroulant : le burger sert a fermer */
+.close-button {
+    display: none;
+}
+
+
+/* ============================================
+   LOGO (centre dans la navbar)
+============================================ */
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img,
+.nav-gif {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+
+/* ============================================
+   HERO (pages des collegues)
+============================================ */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 85px 20px 20px 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    align-self: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 85px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 226, 193, 0.123);
+    border-radius: 24px;
+
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.hero-title {
+    font-family: "Permanent Marker", cursive;
+    color: #FDF8D4;
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+}
+
+.hero-container:hover .hero-image {
+    filter: blur(4px);
+}
+
+.hero-container:hover .hero-overlay {
+    opacity: 1;
+}
+
+
+/* ============================================
+   PAGE EQUIPE (team.html)
+   L'image n'avait pas de style : sans marge haute
+   elle passait sous la navbar fixe.
+============================================ */
+.team-image {
+    display: block;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 90px auto 20px;
+    border-radius: 35px;
+}
+
+
+/* ============================================
+   BANNIERE D'ACCUEIL (tes pages)
+============================================ */
+.banner {
+    position: relative;
+    width: calc(100% - 40px);
+    height: 330px;
+    margin: 85px 20px 20px; /* 85px en haut pour ne pas passer sous la navbar */
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* l'image remplit le cadre sans etre deformee */
+    display: block;
+    transition: filter 0.4s ease;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.banner h1 {
+    margin: 0;
+    color: white;
+    font-family: "Permanent Marker", cursive;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* petits effets au survol de la banniere */
+.banner:hover img {
+    filter: brightness(0.7);
+}
+
+.banner:hover h1 {
+    transform: scale(1.1);
+}
+
+
+/* ============================================
+   CARROUSEL / SLIDER DES PROJETS
+============================================ */
+.carousel {
+    position: relative;
+    width: calc(100% - 40px);  /* meme largeur que la banniere (20px de chaque cote) */
+    margin: 110px 20px 40px;   /* 70px de navbar + 40px d'air en haut */
+    overflow: hidden;          /* cache les slides qui depassent */
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    /* pas de padding ici : c'est lui qui laissait voir les slides voisines */
+}
+
+/* le rail qui contient toutes les slides cote a cote */
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* chaque slide prend toute la largeur du carrousel */
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px; /* en px : un % se calcule sur la largeur, meme pour le haut et le bas */
+}
+
+/* une couleur differente par slide, a remplacer par des vraies images plus tard */
+.slide:nth-child(1) { background: linear-gradient(135deg, #667eea, #764ba2); }
+.slide:nth-child(2) { background: linear-gradient(135deg, #f6d365, #fda085); }
+.slide:nth-child(3) { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.slide:nth-child(4) { background: linear-gradient(135deg, #ff6a88, #ff99ac); }
+
+/* fleches gauche / droite (rondes) */
+.carousel .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 0.2s;
+}
+
+.carousel .arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel .arrow.prev { left: 20px; }
+.carousel .arrow.next { right: 20px; }
+
+/* petits points cliquables en bas du carrousel */
+.carousel .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.carousel .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* reste visible sur les slides claires */
+    transition: background 0.2s;
+}
+
+.carousel .dot.active {
+    background: white;
+}
