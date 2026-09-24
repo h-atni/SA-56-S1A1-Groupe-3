@@ -1,49 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <title>Projets</title>
 </head>
 
 <body>
+<nav class="navigation">
+        <div class="menu-container">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-button">=</label>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-
-        <!-- MENU BURGER -->
-        <div class="burger">
-            <input type="checkbox" id="menu-toggle">
-
-            <label for="menu-toggle" class="burger-button">
-                ☰
-            </label>
-
-            <!-- MENU QUI S'OUVRE -->
-            <div class="menu">
-
-                <label for="menu-toggle" class="close-button">
-                    ✕
-                </label>
-
+            <div class="menu-links">
                 <a href="index.html">Accueil</a>
                 <a href="presentation.html">Présentation</a>
-                <a href="economy.html">Économie</a>
-                <a href="realisation.html">Réalisations</a>
-
+                <a href="economy.html">Economie</a>
+                <a href="realisation.html" class="active">Realisations</a>
+                <a href="team.html">Forticher</a>
             </div>
         </div>
 
+        <img src="./assets/fortiche.gif" alt="Logo fortiche" class="nav-gif">
 
-        <!-- LOGO CENTRÉ -->
-        <div class="logo">
-            <img src="fortiche.gif" alt="Logo">
-        </div>
-
+        <div class="nav-spacer"></div>
 
     </nav>
 
