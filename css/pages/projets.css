@@ -1,9 +1,4 @@
-/* ============================================
-   STYLES UNIQUES À LA PAGE PROJETS / COLLEGUES
-   (À charger APRÈS styles.css dans ton HTML)
-============================================ */
-
-/* --- Logo centré spécifique --- */
+/*  Logo centré spécifique  */
 .logo {
     position: absolute;
     left: 50%;
@@ -18,7 +13,7 @@
     display: block;
 }
 
-/* --- Page Équipe (team.html) --- */
+/*  Page Équipe (team.html)  */
 .team-image {
     display: block;
     width: calc(100% - 40px);
@@ -27,7 +22,7 @@
     border-radius: 35px;
 }
 
-/* --- Bannière d'accueil --- */
+/*  Bannière d'accueil */
 .banner {
     position: relative;
     width: calc(100% - 40px);
@@ -74,12 +69,13 @@
     transform: scale(1.1);
 }
 
-/* --- Carrousel / Slider des projets --- */
+/*  Carrousel  */
 .carousel {
     position: relative;
-    width: calc(100% - 40px);
-    margin: 110px 20px 40px;
-    overflow: hidden;
+    max-width: 900px;
+    /* 100px d'écart avec la navbar au-dessus, 40px en dessous, centré horizontalement */
+    margin: 100px auto 40px;
+    overflow: hidden;   /* cache les slides qui dépassent */
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
@@ -90,37 +86,52 @@
 }
 
 .slide {
+    position: relative;      /* pour positionner l'image et le texte à l'intérieur */
+    flex: 0 0 100%;           /* chaque slide prend exactement toute la largeur, ne rétrécit pas */
     min-width: 100%;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
+    height: 400px;
+    overflow: hidden;
     text-align: center;
-    padding: 40px;
 }
 
+/* l'image remplit tout le cadre de la slide, recadrée proprement, sans déformation */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* couleur de secours affichée tant que l'image n'est pas encore chargée */
 .slide:nth-child(1) { background: linear-gradient(135deg, #667eea, #764ba2); }
 .slide:nth-child(2) { background: linear-gradient(135deg, #f6d365, #fda085); }
 .slide:nth-child(3) { background: linear-gradient(135deg, #43e97b, #38f9d7); }
 .slide:nth-child(4) { background: linear-gradient(135deg, #ff6a88, #ff99ac); }
 
+/* légende centrée par-dessus l'image */
+.slide-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* flèches gauche / droite */
 .carousel .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: rgba(0, 0, 0, 0.4);
     color: white;
     border: none;
     font-size: 1.8rem;
+    padding: 10px 16px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 2;
@@ -131,12 +142,13 @@
     background: rgba(0, 0, 0, 0.7);
 }
 
-.carousel .arrow.prev { left: 20px; }
-.carousel .arrow.next { right: 20px; }
+.carousel .arrow.prev { left: 15px; }
+.carousel .arrow.next { right: 15px; }
 
+/* petits points cliquables en bas du carrousel */
 .carousel .dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     left: 0;
     right: 0;
     display: flex;
@@ -152,10 +164,14 @@
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     border: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     transition: background 0.2s;
 }
 
 .carousel .dot.active {
     background: white;
+}
+
+footer {
+  background-color: #111;
+  color: #fff;
 }
