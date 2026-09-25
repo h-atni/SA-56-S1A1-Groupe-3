@@ -170,3 +170,8 @@
 .carousel .dot.active {
     background: white;
 }
+
+footer {
+  background-color: #111;
+  color: #fff;
+}
