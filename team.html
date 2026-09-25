@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="./assets/icone/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/icone/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/icone/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/icone/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icone/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icone/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/icone/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/icone/favicon-16x16.png">
@@ -28,31 +28,351 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+
     <nav class="navigation">
         <div class="menu-container">
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
             <label for="menu-toggle" class="menu-button">=</label>
-
             <div class="menu-links">
                 <a href="index.html">Accueil</a>
                 <a href="presentation.html">Présentation</a>
-                <a href="economy.html">Economie</a>
-                <a href="projets.html">Realisations</a>
+                <a href="economy.html">Économie</a>
+                <a href="projets.html">Réalisations</a>
                 <a href="team.html" class="active">Forticher</a>
+            </div>
+        </div>
+        <img src="./assets/fortiche_blanc.gif" alt="Logo fortiche" class="nav-gif">
+        <div class="nav-spacer"></div>
+    </nav>
+
+    <div class="hero-container">
+        <img src="./assets/forticher.png" alt="Team Fortiche" class="team-image">
+        <div class="hero-degrade"></div>
+    </div>
+
+    <section class="galerie">
+        <div class="galerie-conteneur">
+
+            <div class="galerie-titre">
+                <h1 class="galerie-grand-titre">FORTICHER</h1>
+                <p class="galerie-sous-titre">Nos témoignages</p>
+            </div>
+
+            <input type="radio" name="membre" id="m1" checked>
+            <input type="radio" name="membre" id="m2">
+            <input type="radio" name="membre" id="m3">
+            <input type="radio" name="membre" id="m4">
+            <input type="radio" name="membre" id="m5">
+            <input type="radio" name="membre" id="m6">
+            <input type="radio" name="membre" id="m7">
+            <input type="radio" name="membre" id="m8">
+
+            <a href="https://www.youtube.com/" target="_blank" id="preview-m1" class="grande-preview">
+                <div class="barre-haut">
+                    <span class="preview-categorie">PRÉ-PROD / MONTAGE, STORYBOARD</span>
+                </div>
+                <img src="./assets/m1.png" alt="Antoine Ettori">
+                <div class="bouton-play">PLAY</div>
+                <div class="barre-bas">
+                    <span class="preview-nom">ANTOINE ETTORI</span>
+                    <span class="preview-role">LEAD STORYBOARDER / ARCANE S2</span>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" id="preview-m2" class="grande-preview">
+                <div class="barre-haut">
+                    <span class="preview-categorie">DÉCORS / BG ENVIRONMENT 2D/3D</span>
+                </div>
+                <img src="./assets/m2.png" alt="Sarah Martin">
+                <div class="bouton-play">PLAY</div>
+                <div class="barre-bas">
+                    <span class="preview-nom">SARAH MARTIN</span>
+                    <span class="preview-role">BG ENVIRONMENT ARTIST / ARCANE S2</span>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" id="preview-m3" class="grande-preview">
+                <div class="barre-haut">
+                    <span class="preview-categorie">PERSONNAGES / CHARA PROPS 2D/3D</span>
+                </div>
+                <img src="./assets/m3.png" alt="Lucas Bernard">
+                <div class="bouton-play">PLAY</div>
+                <div class="barre-bas">
+                    <span class="preview-nom">LUCAS BERNARD</span>
+                    <span class="preview-role">CHARA PROPS ARTIST / ARCANE S2</span>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" id="preview-m4" class="grande-preview">
+                <div class="barre-haut">
+                    <span class="preview-categorie">POST-PROD / RENDER ET COMPOSITION</span>
+                </div>
+                <img src="./assets/m4.png" alt="Emma Dupont">
+                <div class="bouton-play">PLAY</div>
+                <div class="barre-bas">
+                    <span class="preview-nom">EMMA DUPONT</span>
+                    <span class="preview-role">RENDER / COMPOSITION ARTIST / ARCANE S2</span>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" id="preview-m5" class="grande-preview">
+                <div class="barre-haut">
+                    <span class="preview-categorie">ANIMATION / LAYOUT ET ANIMATION</span>
+                </div>
+                <img src="./assets/m5.png" alt="Thomas Leroy">
+                <div class="bouton-play">PLAY</div>
+                <div class="barre-bas">
+                    <span class="preview-nom">THOMAS LEROY</span>
+                    <span class="preview-role">LAYOUT / ANIMATION ARTIST / ARCANE S2</span>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" id="preview-m6" class="grande-preview">
+                <div class="barre-haut">
+                    <span class="preview-categorie">TECHNIQUE / TECH PROJECT</span>
+                </div>
+                <img src="./assets/m6.png" alt="Marie Rousseau">
+                <div class="bouton-play">PLAY</div>
+                <div class="barre-bas">
+                    <span class="preview-nom">MARIE ROUSSEAU</span>
+                    <span class="preview-role">TECH PROJECT MANAGER / ARCANE S2</span>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" id="preview-m7" class="grande-preview">
+                <div class="barre-haut">
+                    <span class="preview-categorie">PRODUCTION / PEOPLE</span>
+                </div>
+                <img src="./assets/m7.png" alt="Julien Petit">
+                <div class="bouton-play">PLAY</div>
+                <div class="barre-bas">
+                    <span class="preview-nom">JULIEN PETIT</span>
+                    <span class="preview-role">PRODUCER / ARCANE S2</span>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" id="preview-m8" class="grande-preview">
+                <div class="barre-haut">
+                    <span class="preview-categorie">EFFETS SPÉCIAUX / CFX ET FX</span>
+                </div>
+                <img src="./assets/m8.png" alt="Chloe Simon">
+                <div class="bouton-play">PLAY</div>
+                <div class="barre-bas">
+                    <span class="preview-nom">CHLOÉ SIMON</span>
+                    <span class="preview-role">CFX / FX ARTIST / ARCANE S2</span>
+                </div>
+            </a>
+
+            <div class="grille-membres">
+
+                <label for="m1" class="carte">
+                    <img src="./assets/m1.png" alt="Antoine Ettori">
+                    <span>STORYBOARDER</span>
+                </label>
+
+                <label for="m2" class="carte">
+                    <img src="./assets/m2.png" alt="Sarah Martin">
+                    <span>BG ENVIRONMENT 2D/3D</span>
+                </label>
+
+                <label for="m3" class="carte">
+                    <img src="./assets/m3.png" alt="Lucas Bernard">
+                    <span>CHARA PROPS 2D/3D</span>
+                </label>
+
+                <label for="m4" class="carte">
+                    <img src="./assets/m4.png" alt="Emma Dupont">
+                    <span>RENDER/COMPOSITION</span>
+                </label>
+
+                <label for="m5" class="carte">
+                    <img src="./assets/m5.png" alt="Thomas Leroy">
+                    <span>LAYOUT/ANIMATION</span>
+                </label>
+
+                <label for="m6" class="carte">
+                    <img src="./assets/m6.png" alt="Marie Rousseau">
+                    <span>TECH PROJECT</span>
+                </label>
+
+                <label for="m7" class="carte">
+                    <img src="./assets/m7.png" alt="Julien Petit">
+                    <span>PEOPLE</span>
+                </label>
+
+                <label for="m8" class="carte">
+                    <img src="./assets/m8.png" alt="Chloe Simon">
+                    <span>CFX/FX</span>
+                </label>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-equipe">
+
+        <div class="equipe-titre">
+            <p class="equipe-sous-titre">nos équipes</p>
+            <h2 class="equipe-grand-titre">L'ÉQUIPE DIRIGEANTE</h2>
+        </div>
+
+        <input type="checkbox" id="toggle-plus">
+
+        <div class="colonnes-equipe">
+
+            <div class="col-equipe">
+                <div class="carte-dirigeant">
+                    <img src="./assets/forticher.png" alt="Jerome Combe">
+                    <div class="carte-info">
+                        <h3>JÉRÔME COMBE</h3>
+                        <p class="role-principal">CO-FONDATEUR &amp; DIRECTEUR CRÉATIF</p>
+                        <p class="role-secondaire">Réalisateur</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-equipe col-centre">
+                <div class="carte-dirigeant">
+                    <img src="./assets/forticher.png" alt="Pascal Charrue">
+                    <div class="carte-info">
+                        <h3>PASCAL CHARRUE</h3>
+                        <p class="role-principal">CO-FONDATEUR &amp; DIRECTEUR CRÉATIF</p>
+                        <p class="role-secondaire">Réalisateur</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-equipe">
+                <div class="carte-dirigeant">
+                    <img src="./assets/forticher.png" alt="Arnaud Delord">
+                    <div class="carte-info">
+                        <h3>ARNAUD DELORD</h3>
+                        <p class="role-principal">CO-FONDATEUR &amp; DIRECTEUR CRÉATIF</p>
+                        <p class="role-secondaire">Réalisateur</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <label for="toggle-plus" class="btn-plus">
+            <span class="txt-plus">PLUS +</span>
+            <span class="txt-moins">MOINS -</span>
+        </label>
+
+        <div class="membres-caches">
+            <div class="colonnes-equipe colonnes-extra">
+
+                <div class="col-equipe">
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Bart Maudoury">
+                        <div class="carte-info">
+                            <h3>BART MAUDOURY</h3>
+                            <p class="role-principal">DIRECTEUR GÉNÉRAL</p>
+                        </div>
+                    </div>
+
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Christine Ponzevera">
+                        <div class="carte-info">
+                            <h3>CHRISTINE PONZEVERA</h3>
+                            <p class="role-principal">PRODUCTRICE</p>
+                            <p class="role-secondaire">Production Exécutive</p>
+                        </div>
+                    </div>
+
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Cecile Hengiaux-Essame">
+                        <div class="carte-info">
+                            <h3>CÉCILE HENGIAUX-ESSAME</h3>
+                            <p class="role-principal">DIRECTRICE DES PRODUCTIONS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-equipe col-centre">
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Hervé Dupont">
+                        <div class="carte-info">
+                            <h3>HERVÉ DUPONT</h3>
+                            <p class="role-principal">DIRECTEUR GÉNÉRAL FINANCE</p>
+                            <p class="role-secondaire">Producteur Délégué</p>
+                        </div>
+                    </div>
+
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Philippe Llerena">
+                        <div class="carte-info">
+                            <h3>PHILIPPE LLERENA</h3>
+                            <p class="role-principal">DIRECTEUR TECHNIQUE</p>
+                        </div>
+                    </div>
+
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Angelina Pereira-Richomme">
+                        <div class="carte-info">
+                            <h3>ANGELINA PEREIRA-RICHOMME</h3>
+                            <p class="role-principal">DIRECTRICE DES RESSOURCES HUMAINES</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-equipe">
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Bruno Le Sassier">
+                        <div class="carte-info">
+                            <h3>BRUNO LE SASSIER</h3>
+                            <p class="role-principal">DIRECTEUR GÉNÉRAL ADJOINT</p>
+                        </div>
+                    </div>
+
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Aude Belriste">
+                        <div class="carte-info">
+                            <h3>AUDE BELRISTE</h3>
+                            <p class="role-principal">DIRECTRICE MARKETING</p>
+                            <p class="role-secondaire">Marque &amp; Communication</p>
+                        </div>
+                    </div>
+
+                    <div class="carte-dirigeant">
+                        <img src="./assets/forticher.png" alt="Marion Delord">
+                        <div class="carte-info">
+                            <h3>MARION DELORD</h3>
+                            <p class="role-principal">PRODUCTION EXECUTIVE</p>
+                            <p class="role-secondaire">Photographe</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
 
-        <img src="./assets/fortiche_blanc.gif" alt="Logo fortiche" class="nav-gif">
+    </section>
 
-        <div class="nav-spacer"></div>
-        </nav>
-    <div class = "hero-container">
-         <img src="./assets/forticher.png" alt="Team Fortiche" class="team-image">
-    </div>
-<footer>
-<p>Louay Ben Ahmed</p>
-</footer>
+    <footer>
+        <div class="footer-gauche">
+            <p class="footer-annee">Année universitaire 2026-2027 / Semestre 1</p>
+            <p>SAÉ 56 · Groupe 3 · Sujet : Fortiche Production</p>
+            <p>Atni Hicham (Référent)</p>
+            <p>Bourgogne Arthur</p>
+            <p>Ben Ahmed Louay</p>
+            <p>Barry Khadidiatou</p>
+            <p>Conchin August</p>
+        </div>
+
+        <div class="footer-centre">
+            <p>Créateur : <span class="footer-createur">Ben Ahmed Louay</span></p>
+        </div>
+
+        <div class="footer-droite">
+            <a href="index.html">Accueil</a>
+            <a href="presentation.html">Présentation</a>
+            <a href="economy.html">Économie</a>
+            <a href="projets.html">Réalisations</a>
+            <a href="team.html">Forticher</a>
+        </div>
+    </footer>
+
 </body>
-
 </html>
