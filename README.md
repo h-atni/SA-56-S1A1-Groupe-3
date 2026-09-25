@@ -56,23 +56,23 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&sho
 
 ### Recherches d'informations
 
-- Nom Prénom
-- Nom Prénom
-
-
-### Rapport économique
-
-- Nom Prénom
-- Nom Prénom
-- Nom Prénom
+- BOURGOGNE Arthur - Mettre en avant Fortiche
+- ATNI Hicham - Les projets de Fortiche
+- BEN AHMED Louay - L'équipe de Fortiche
+- BARRY Khadidiatou - Informations global de Fortiche
+- CONCHIN August - L'aspect economique de Fortiche
 
 ### Développement site
 
-- Nom Prénom
-  - Page d’accueil
+- ATNI Hicham
+  - [Page de projet](projets.html)
+- BOURGOGNE Arthur
+  - [Page d’accueil](index.html)
   - "Template" de page (Navbar/Footer)
-  - Page présentation
-- Nom Prénom
-  - Page histoire
-- Nom Prénom
-  - Page organisation
+- BEN AHMED Louay
+  - [Page équipe](team.html)
+  - footer compléter
+- BARRY Khadidiatou
+  - [Page de présentation](presentation.html)
+- CONCHIN August
+  - [Page economique](economy.html)
