@@ -74,24 +74,24 @@
     transform: scale(1.1);
 }
 
-/* --- Carrousel / Slider des projets --- */
 .carousel {
     position: relative;
-    width: calc(100% - 40px);
-    margin: 110px 20px 40px;
-    overflow: hidden;
+    max-width: 900px;
+    margin: 40px auto; /* centré horizontalement */
+    overflow: hidden;   /* cache les slides qui dépassent */
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* le rail qui contient toutes les slides côte à côte */
 .carousel-track {
     display: flex;
     transition: transform 0.6s ease-in-out;
 }
 
 .slide {
-    min-width: 100%;
-    height: 600px;
+    min-width: 100%; /* chaque slide prend toute la largeur du carrousel */
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,28 +99,25 @@
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
 }
 
+/* une couleur différente par slide, à remplacer par des vraies images plus tard */
 .slide:nth-child(1) { background: linear-gradient(135deg, #667eea, #764ba2); }
 .slide:nth-child(2) { background: linear-gradient(135deg, #f6d365, #fda085); }
 .slide:nth-child(3) { background: linear-gradient(135deg, #43e97b, #38f9d7); }
 .slide:nth-child(4) { background: linear-gradient(135deg, #ff6a88, #ff99ac); }
 
+/* flèches gauche / droite */
 .carousel .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: rgba(0, 0, 0, 0.4);
     color: white;
     border: none;
     font-size: 1.8rem;
+    padding: 10px 16px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 2;
@@ -131,12 +128,13 @@
     background: rgba(0, 0, 0, 0.7);
 }
 
-.carousel .arrow.prev { left: 20px; }
-.carousel .arrow.next { right: 20px; }
+.carousel .arrow.prev { left: 15px; }
+.carousel .arrow.next { right: 15px; }
 
+/* petits points cliquables en bas du carrousel */
 .carousel .dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     left: 0;
     right: 0;
     display: flex;
@@ -152,7 +150,6 @@
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     border: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     transition: background 0.2s;
 }
 
