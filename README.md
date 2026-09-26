@@ -25,7 +25,7 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 ## Développement Site Web et Validation des pages
 
 ### Page d'accueil
-**Auteur : Nom Prénom**
+**Auteur : Bourgogne Arthur**
 
 Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
 
