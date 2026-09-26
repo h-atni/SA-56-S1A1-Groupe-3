@@ -19,7 +19,7 @@ SAÉ_FORTICHE\
 Ce dépôt correspond à un site web créé en HTML/CSS/JS dans le cadre de la SAÉ 05-06 à l'IUT de Belfort-Montbéliard. Ce site présente des informations concernant l'entreprise FORTICHE et sert de vitrine pour présenter l'entreprise, ses activité, son organisation et son historique. Vous trouverez dans ce dépôt et sur le site un rapport économique analysant l'aspect économique de FORTICHE
 
 ## Choix de conception
-Pour la conception du site, nous nous sommes grandement inspirés du site officiel de ******* (trouvable [ici](https://www.entreprise.com/fr-fr/)), du site d'un de ses principaux concurrents [xxxxxxxxxx](https://www.entreprise2.fr/) et nous avons pris comme référence la charte de ************** disponible [ici](doc/charte_graphique.pdf).
+Pour la conception du site, nous nous sommes grandement inspirés du site officiel de FORTICHE (trouvable [ici](https://forticheprod.com/fr/)), du site d'un de ses principaux concurrents [VIRTUOS](https://www.virtuosgames.com/fr/our-services/art-production/) et nous avons pris comme référence la charte de FORTICHE disponible [ici](doc/charte_graphique.pdf).
 
 
 ## Développement Site Web et Validation des pages
