@@ -13,7 +13,7 @@ SAÉ_FORTICHE\
  - [Bourgogne Arthur](arthur.bourgogne@edu.univ-fcomte.fr)
  - [Ben Ahmed Louay](louay.ben_ahmed@edu.univ-fcomte.fr)
  - [Barry Khadidiatou](khadidiatou.barry@edu.univ-fcomte.fr)
- - [Conchin August](august.conchin@edu.univ-fcomte.fr)
+ - [Conchin August / aka. Daperkz](august.conchin@edu.univ-fcomte.fr)
 
 ## Présentation
 Ce dépôt correspond à un site web créé en HTML/CSS/JS dans le cadre de la SAÉ 05-06 à l'IUT de Belfort-Montbéliard. Ce site présente des informations concernant l'entreprise FORTICHE et sert de vitrine pour présenter l'entreprise, ses activité, son organisation et son historique. Vous trouverez dans ce dépôt et sur le site un rapport économique analysant l'aspect économique de FORTICHE
