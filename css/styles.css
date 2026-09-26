@@ -75,7 +75,7 @@ header nav.navigation, nav.navigation {
 .menu-links a {
     display: block;
     padding: 14px 24px;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Nunito Sans", cursive;
     font-size: 20px;
     text-align: left;
     text-decoration: none;
@@ -115,14 +115,14 @@ header nav.navigation, nav.navigation {
 }
 
 .permanent-marker-regular {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Nunito Sans", cursive;
     font-weight: 400;
     font-style: normal;
 }
 
 a {
     text-align: center;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Nunito Sans", cursive;
     text-decoration: none;
     color: #000000;
     font-size: 25px;
@@ -165,7 +165,7 @@ a {
 }
 
 .hero-title {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Nunito Sans", cursive;
     color: #FDF8D4;
     font-size: 60px;
     text-align: center;
@@ -247,4 +247,144 @@ footer {
 
 .footer-droite a:hover {
     color: beige;
+}
+
+/* ============================================
+   INTRO
+============================================ */
+.intro-section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro-title {
+    font-family: "Nunito Sans", cursive;
+    color: #FDF8D4;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-family: "Nunito Sans", sans-serif;
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   CARTES
+============================================ */
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 40px 60px 40px;
+}
+
+.card {
+    background-color: #2e2a2e;
+    border-radius: 16px;
+    padding: 24px;
+    width: 220px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #383338;
+}
+
+.card h3 {
+    font-family: "Nunito Sans", cursive;
+    color: #d65a31;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+.card p {
+    font-family: "Nunito Sans", sans-serif;
+    color: #aaaaaa;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+}
+
+/* ============================================
+   STATS
+============================================ */
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 20px 80px 20px;
+    background-color: #1a181a;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-family: "Nunito Sans", cursive;
+    color: #FDF8D4;
+    font-size: 36px;
+}
+
+.stat-label {
+    font-family: "Nunito Sans", sans-serif;
+    color: #888888;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ============================================
+   BOUTON SCROLL
+============================================ */
+.scroll-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: rgba(35, 32, 35, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    color: #FDF8D4;
+    font-family: "Permanent Marker", cursive;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    z-index: 5;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(214, 90, 49, 0.8);
+    transform: translateX(-50%) translateY(-3px);
+}
+
+.scroll-arrow {
+    font-size: 18px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
 }
