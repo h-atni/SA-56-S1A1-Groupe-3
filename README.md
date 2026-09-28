@@ -46,6 +46,29 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&sho
 <br>
 <img src="assets/verificateur_W3C.png" width="400px" alt="capture ecran sur w3c">
 
+### Page économique
+**Auteur : Nom Prénom**
+
+Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
+
+<br>
+<img src="assets/verificateur_W3C.png" width="400px" alt="capture ecran sur w3c">
+
+### Page réalisation
+**Auteur : Nom Prénom**
+
+Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
+
+<br>
+<img src="assets/verificateur_W3C.png" width="400px" alt="capture ecran sur w3c">
+
+### Page Equipe
+**Auteur : Nom Prénom**
+
+Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
+
+<br>
+<img src="assets/verificateur_W3C.png" width="400px" alt="capture ecran sur w3c">
 
 
 ## Répartition du travail
