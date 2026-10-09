@@ -1,7 +1,20 @@
 :root {
     --color-background: #232023;
     --color: white;
+    --color-rouge-corail: #FF364A;
+    --color-sable: #CCC088;
+    --color-gris-clair: #D8D9D9;
+    --color-vert-menthe: #58FFAB;
+    --color-lavande: #A496FA;
     --main-font: "Nunito Sans";
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("../assets/font/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
 }
 
 body {
@@ -65,7 +78,7 @@ header nav.navigation, nav.navigation {
     width: 220px;
     padding: 8px 0;
     flex-direction: column;
-    background-color: #232023;
+    background-color: var(--color-background);
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     z-index: 10;
@@ -75,21 +88,25 @@ header nav.navigation, nav.navigation {
 .menu-links a {
     display: block;
     padding: 14px 24px;
-    font-family: "Nunito Sans", cursive;
+    font-family: "Nunito Sans";
     font-size: 20px;
     text-align: left;
     text-decoration: none;
-    color: beige;
+    color: var(--color-gris-clair);
+    transition: background-color .2s ease, color .2s ease;
 }
 
 .menu a:hover,
 .menu-links a:hover {
-    background-color: #332f33;
+    background-color: rgba(88, 255, 171, .1);
+    color: var(--color-vert-menthe);
 }
 
 .menu a.active,
 .menu-links a.active {
-    border-left: 5px solid #d65a31;
+    background-color: rgba(204, 192, 136, .1);
+    color: var(--color-sable);
+    font-weight: 700;
 }
 
 #menu-toggle:checked ~ .menu,
@@ -111,15 +128,9 @@ header nav.navigation, nav.navigation {
     transform: translateX(-50%);
 }
 
-.permanent-marker-regular {
-    font-family: "Nunito Sans", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
 a {
     text-align: center;
-    font-family: "Nunito Sans", cursive;
+    font-family: "Nunito Sans";
     text-decoration: none;
     color: #000000;
     font-size: 25px;
@@ -162,7 +173,7 @@ a {
 }
 
 .hero-title {
-    font-family: "Nunito Sans", cursive;
+    font-family: "Nunito Sans";
     color: #FDF8D4;
     font-size: 60px;
     text-align: center;
@@ -257,7 +268,7 @@ footer {
 }
 
 .intro-title {
-    font-family: "Nunito Sans", cursive;
+    font-family: "Nunito Sans";
     color: #FDF8D4;
     font-size: 32px;
     margin-bottom: 20px;
@@ -296,7 +307,7 @@ footer {
 }
 
 .card h3 {
-    font-family: "Nunito Sans", cursive;
+    font-family: "Nunito Sans";
     color: #d65a31;
     font-size: 20px;
     margin: 0 0 10px 0;
@@ -330,7 +341,7 @@ footer {
 }
 
 .stat-number {
-    font-family: "Nunito Sans", cursive;
+    font-family: "Nunito Sans";
     color: #FDF8D4;
     font-size: 36px;
 }
@@ -360,7 +371,7 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50px;
     color: #FDF8D4;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Nunito Sans";
     font-size: 16px;
     text-decoration: none;
     transition: background-color 0.2s ease, transform 0.2s ease;
