@@ -61,6 +61,12 @@ ou
   <img src="assets/validator-economy.jpg" width="400px" alt="capture ecran sur w3c">
 ](https://github.com/h-atni/SA-56-S1A1-Groupe-3/blob/main/assets/validator-economy.jpg)
 
+Vérification de l'éco conception de la page : [Détail ICI](https://www.ecoindex.fr/resultat/?id=c0910b38-ef6d-4622-940c-8ccc40f296e7)
+
+ou
+
+<img src="assets/eco-conception-economy.jpg" width="400px" alt="capture ecran sur EcoIndex">
+
 ### Page réalisation
 **Auteur : Nom Prénom**
 
