@@ -53,7 +53,9 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&sho
 ### Page économique
 **Auteur : Conchin August**
 
-Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&useragent=Validator.nu%2FLV+https%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fh-atni.github.io%2FSA-56-S1A1-Groupe-3%2Feconomy.html)
+Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&useragent=Validator.nu%2FLV+https%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fh-atni.github.io%2FSA-56-S1A1-Groupe-3%2Feconomy.html)
+
+ou
 
 [
   <img src="assets/validator-economy.jpg" width="400px" alt="capture ecran sur w3c">
