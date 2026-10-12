@@ -161,3 +161,9 @@ footer {
   background-color: #111;
   color: #fff;
 }
+.slide-label {
+    position: static !important;
+    transform: none !important;
+    background: red !important;
+    color: white !important;
+}
