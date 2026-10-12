@@ -70,11 +70,11 @@
 .carousel {
     position: relative;
     max-width: 900px;
-    /* 100px d'écart avec la navbar au-dessus, 40px en dessous, centré horizontalement */
     margin: 100px auto 40px;
-    overflow: hidden;   /* cache les slides qui dépassent */
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: #2a2a2e;          /* fond du bloc texte + points */
 }
 
 .carousel-track {
@@ -83,46 +83,39 @@
 }
 
 .slide {
-    position: relative;      /* pour positionner l'image et le texte à l'intérieur */
-    flex: 0 0 100%;           /* chaque slide prend exactement toute la largeur, ne rétrécit pas */
+    flex: 0 0 100%;
     min-width: 100%;
-    height: 400px;
-    overflow: hidden;
-    text-align: center;
+    display: flex;
+    flex-direction: column;       /* image au-dessus, texte en dessous */
+    /* plus de height fixe : la slide s'adapte à image + texte */
 }
 
-/* l'image remplit tout le cadre de la slide, recadrée proprement, sans déformation */
 .slide img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
     display: block;
 }
 
-/* couleur de secours affichée tant que l'image n'est pas encore chargée */
-.slide:nth-child(1) { background: linear-gradient(135deg, #667eea, #764ba2); }
-.slide:nth-child(2) { background: linear-gradient(135deg, #f6d365, #fda085); }
-.slide:nth-child(3) { background: linear-gradient(135deg, #43e97b, #38f9d7); }
-.slide:nth-child(4) { background: linear-gradient(135deg, #ff6a88, #ff99ac); }
+/* couleur de secours pendant le chargement : appliquée à l'image seulement */
+.slide:nth-child(1) img { background: linear-gradient(135deg, #667eea, #764ba2); }
+.slide:nth-child(2) img { background: linear-gradient(135deg, #f6d365, #fda085); }
+.slide:nth-child(3) img { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.slide:nth-child(4) img { background: linear-gradient(135deg, #ff6a88, #ff99ac); }
 
-/* légende centrée par-dessus l'image */
+/* légende sous l'image */
 .slide-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 2rem;
+    padding: 14px 18px 8px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
     font-weight: bold;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    pointer-events: none;
 }
 
-/* flèches gauche / droite */
+/* flèches : centrées sur l'image (400px / 2) */
 .carousel .arrow {
     position: absolute;
-    top: 50%;
+    top: 200px;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.4);
     color: white;
@@ -142,23 +135,19 @@
 .carousel .arrow.prev { left: 15px; }
 .carousel .arrow.next { right: 15px; }
 
-/* petits points cliquables en bas du carrousel */
+/* points sous le texte */
 .carousel .dots {
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
     gap: 8px;
-    z-index: 2;
+    padding: 6px 0 14px;
 }
 
 .carousel .dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
     border: none;
     transition: background 0.2s;
@@ -171,4 +160,10 @@
 footer {
   background-color: #111;
   color: #fff;
+}
+.slide-label {
+    position: static !important;
+    transform: none !important;
+    background: red !important;
+    color: white !important;
 }
