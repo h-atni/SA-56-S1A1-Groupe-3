@@ -155,7 +155,78 @@
 #s4:checked ~ .dots label:nth-child(4) {
     background: white;
 }
+.projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto 70px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #2e2a2e;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    background-color: #383338;
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px;
+}
+
+.project-card h3 {
+    margin: 0 0 6px;
+    font-family: "Nunito Sans";
+    font-size: 24px;
+    color: var(--color-sable);
+}
+
+.project-card-meta {
+    margin-bottom: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    color: var(--color-lavande);
+}
+
+.project-card p {
+    margin: 0 0 18px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.project-card-link {
+    margin-top: auto;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-vert-menthe);
+}
 footer {
     background-color: #111;
     color: #fff;
