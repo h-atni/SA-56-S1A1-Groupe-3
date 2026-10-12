@@ -5,8 +5,10 @@
 
 ## Sujet
 
-SAÉ_FORTICHE\
-[Lien du site du projet](https://h-atni.github.io/SA-56-S1A1-Groupe-3/)
+SAÉ_FORTICHE
+Lien du site du projet sur :
+ - [Github](https://h-atni.github.io/SA-56-S1A1-Groupe-3/)
+ - [BitBucket](https://aconchin.bitbucket.io./)
 
 ## Membres du groupe :
  - [Atni Hicham (référent)](hicham.atni@edu.univ-fcomte.fr)
@@ -23,6 +25,8 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 
 ## Développement Site Web et Validation des pages
+
+La validation des pages peuvent être retrouvés ci-dessous ou bien dans les [Githubs Actions](https://github.com/h-atni/SA-56-S1A1-Groupe-3/actions)
 
 ### Page d'accueil
 **Auteur : Bourgogne Arthur**
@@ -47,12 +51,13 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&sho
 <img src="assets/verificateur_W3C.png" width="400px" alt="capture ecran sur w3c">
 
 ### Page économique
-**Auteur : Nom Prénom**
+**Auteur : Conchin August**
 
-Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
+Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&useragent=Validator.nu%2FLV+https%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fh-atni.github.io%2FSA-56-S1A1-Groupe-3%2Feconomy.html)
 
-<br>
-<img src="assets/verificateur_W3C.png" width="400px" alt="capture ecran sur w3c">
+[
+  <img src="assets/validator-economy.jpg" width="400px" alt="capture ecran sur w3c">
+](https://github.com/h-atni/SA-56-S1A1-Groupe-3/blob/main/assets/validator-economy.jpg)
 
 ### Page réalisation
 **Auteur : Nom Prénom**
