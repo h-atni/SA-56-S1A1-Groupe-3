@@ -1,16 +1,13 @@
-/*  Logo centré spécifique  */
 .nav-gif {
-    height: 250%;
+    height: 150%;
     width: auto;
     display: block;
     position: absolute;
     left: 50%;
-    top: -30px;
+    top: -20px;
     transform: translateX(-50%);
 }
 
-
-/*  Page Équipe (team.html)  */
 .team-image {
     display: block;
     width: calc(100% - 40px);
@@ -19,7 +16,6 @@
     border-radius: 35px;
 }
 
-/*  Bannière d'accueil */
 .banner {
     position: relative;
     width: calc(100% - 40px);
@@ -66,15 +62,18 @@
     transform: scale(1.1);
 }
 
-/*  Carrousel  */
 .carousel {
     position: relative;
     max-width: 900px;
-    margin: 100px auto 40px;
+    margin: 130px auto 40px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    background: #2a2a2e;          /* fond du bloc texte + points */
+    background: #2a2a2e;
+}
+
+.carousel input[type="radio"] {
+    display: none;
 }
 
 .carousel-track {
@@ -82,12 +81,17 @@
     transition: transform 0.6s ease-in-out;
 }
 
+#s1:checked ~ .carousel-track { transform: translateX(0); }
+#s2:checked ~ .carousel-track { transform: translateX(-100%); }
+#s3:checked ~ .carousel-track { transform: translateX(-200%); }
+#s4:checked ~ .carousel-track { transform: translateX(-300%); }
+
 .slide {
+    position: relative;
     flex: 0 0 100%;
     min-width: 100%;
     display: flex;
-    flex-direction: column;       /* image au-dessus, texte en dessous */
-    /* plus de height fixe : la slide s'adapte à image + texte */
+    flex-direction: column;
 }
 
 .slide img {
@@ -97,13 +101,11 @@
     display: block;
 }
 
-/* couleur de secours pendant le chargement : appliquée à l'image seulement */
 .slide:nth-child(1) img { background: linear-gradient(135deg, #667eea, #764ba2); }
 .slide:nth-child(2) img { background: linear-gradient(135deg, #f6d365, #fda085); }
 .slide:nth-child(3) img { background: linear-gradient(135deg, #43e97b, #38f9d7); }
 .slide:nth-child(4) img { background: linear-gradient(135deg, #ff6a88, #ff99ac); }
 
-/* légende sous l'image */
 .slide-label {
     padding: 14px 18px 8px;
     text-align: center;
@@ -112,58 +114,49 @@
     font-weight: bold;
 }
 
-/* flèches : centrées sur l'image (400px / 2) */
-.carousel .arrow {
+.arrow {
     position: absolute;
     top: 200px;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.4);
     color: white;
-    border: none;
     font-size: 1.8rem;
     padding: 10px 16px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 2;
     transition: background 0.2s;
+    user-select: none;
 }
 
-.carousel .arrow:hover {
-    background: rgba(0, 0, 0, 0.7);
-}
+.arrow:hover { background: rgba(0, 0, 0, 0.7); }
+.arrow.prev { left: 15px; }
+.arrow.next { right: 15px; }
 
-.carousel .arrow.prev { left: 15px; }
-.carousel .arrow.next { right: 15px; }
-
-/* points sous le texte */
-.carousel .dots {
+.dots {
     display: flex;
     justify-content: center;
     gap: 8px;
     padding: 6px 0 14px;
 }
 
-.carousel .dot {
+.dots label {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
-    border: none;
     transition: background 0.2s;
 }
 
-.carousel .dot.active {
+#s1:checked ~ .dots label:nth-child(1),
+#s2:checked ~ .dots label:nth-child(2),
+#s3:checked ~ .dots label:nth-child(3),
+#s4:checked ~ .dots label:nth-child(4) {
     background: white;
 }
 
 footer {
-  background-color: #111;
-  color: #fff;
-}
-.slide-label {
-    position: static !important;
-    transform: none !important;
-    background: red !important;
-    color: white !important;
+    background-color: #111;
+    color: #fff;
 }
