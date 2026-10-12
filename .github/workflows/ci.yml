@@ -47,3 +47,23 @@ jobs:
           git remote add bitbucket https://x-token-auth:${BITBUCKET_TOKEN}@bitbucket.org/aconchin/aconchin.bitbucket.io.git
           BRANCH_NAME=$(echo ${GITHUB_REF} | sed 's|refs/heads/||')
           git push bitbucket ${BRANCH_NAME}:${BRANCH_NAME} --force
+
+  sync_to_gitlab:
+    name: Mirror to GitLab
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Push to GitLab
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.com/groupe34203541/SA-56-S1A1-Groupe-3.git
+          BRANCH_NAME=$(echo ${GITHUB_REF} | sed 's|refs/heads/||')
+          git push gitlab ${BRANCH_NAME}:${BRANCH_NAME} --force
