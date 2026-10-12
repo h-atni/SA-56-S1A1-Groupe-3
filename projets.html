@@ -24,101 +24,60 @@
                 <a href="team.html">Forticher</a>
             </div>
         </div>
-        
+
         <img src="./assets/fortiche_blanc.png" alt="Logo fastoche" class="nav-gif">
-        
+
         <div class="nav-spacer"></div>
     </nav>
 
-    <div class="carousel" id="carousel">
+    <div class="carousel">
 
-        <div class="carousel-track" id="track">
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+
+        <div class="carousel-track">
 
             <div class="slide">
-                <img src="./assets/projet.png" alt="Projet 1 : projet 1">
+                <img src="./assets/projet.png" alt="Projet 1 : Road to IMMO">
                 <span class="slide-label">Projet 1 : Road to IMMO</span>
+                <label for="s4" class="arrow prev" aria-label="Projet précédent">&#10094;</label>
+                <label for="s2" class="arrow next" aria-label="Projet suivant">&#10095;</label>
             </div>
 
             <div class="slide">
-                <img src="./assets/arcane2.png" alt="Projet 2 : projet 2">
+                <img src="./assets/arcane2.png" alt="Projet 2 : Arcane saison 1">
                 <span class="slide-label">Projet 2 : Arcane saison 1</span>
+                <label for="s1" class="arrow prev" aria-label="Projet précédent">&#10094;</label>
+                <label for="s3" class="arrow next" aria-label="Projet suivant">&#10095;</label>
             </div>
 
             <div class="slide">
-                <img src="./assets/arcane.png" alt="projet 3">
+                <img src="./assets/arcane.png" alt="Projet 3 : Arcane saison 2">
                 <span class="slide-label">Projet 3 : Arcane saison 2</span>
+                <label for="s2" class="arrow prev" aria-label="Projet précédent">&#10094;</label>
+                <label for="s4" class="arrow next" aria-label="Projet suivant">&#10095;</label>
             </div>
 
             <div class="slide">
-                <img src="./assets/cinematic.png" alt="projet 4">
+                <img src="./assets/cinematic.png" alt="Projet 4 : A DARK GAMBIT">
                 <span class="slide-label">Projet 4 : A DARK GAMBIT</span>
+                <label for="s3" class="arrow prev" aria-label="Projet précédent">&#10094;</label>
+                <label for="s1" class="arrow next" aria-label="Projet suivant">&#10095;</label>
             </div>
 
         </div>
 
-        <button class="arrow prev" onclick="moveSlide(-1)" aria-label="Projet précédent">
-            &#10094;
-        </button>
-
-        <button class="arrow next" onclick="moveSlide(1)" aria-label="Projet suivant">
-            &#10095;
-        </button>
-        <div class="dots" id="dots"></div>
+        <div class="dots">
+            <label for="s1"></label>
+            <label for="s2"></label>
+            <label for="s3"></label>
+            <label for="s4"></label>
+        </div>
 
     </div>
 
-    <script>
-        const track = document.getElementById('track');
-        const slides = document.querySelectorAll('.slide');
-        const dotsContainer = document.getElementById('dots');
-
-        let index = 0;
-        let autoplayInterval;
-
-        slides.forEach((_, i) => {
-            const dot = document.createElement('button');
-            dot.classList.add('dot');
-            if (i === 0) {
-                dot.classList.add('active');
-            }
-            dot.addEventListener('click', () => {
-                goToSlide(i);
-            });
-            dotsContainer.appendChild(dot);
-        });
-        const dots = document.querySelectorAll('.dot');
-        function updateSlide() {
-            track.style.transform =
-                `translateX(-${index * 100}%)`;
-
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-            dots[index].classList.add('active');
-        }
-        function moveSlide(direction) {
-            index =
-                (index + direction + slides.length)
-                % slides.length;
-            updateSlide();
-            resetAutoplay();
-        }
-        function goToSlide(i) {
-            index = i;
-            updateSlide();
-            resetAutoplay();
-        }
-        function startAutoplay() {
-            autoplayInterval = setInterval(() => {
-                moveSlide(1);
-            }, 4000);
-        }
-        function resetAutoplay() {
-            clearInterval(autoplayInterval);
-            startAutoplay();
-        }
-        startAutoplay();
-    </script>
     <footer>
         <div class="footer-gauche">
             <p class="footer-annee">Année universitaire 2026-2027 / Semestre 1</p>
