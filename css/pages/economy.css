@@ -58,7 +58,6 @@
 }
 
 .info-card,
-.economy-chart,
 .sources {
     border: 1px solid var(--economy-border);
     border-radius: 8px;
@@ -93,7 +92,6 @@
 .info-card p:not(.card-kicker),
 .info-card li,
 .sources li,
-.table-intro,
 .source-date {
     color: var(--color-gris-clair);
     line-height: 1.7;
@@ -166,9 +164,11 @@
     margin: 0 auto;
     border-radius: 10px;
     background: #fff;
+    transition: transform .25s ease;
 }
 
 .image-link {
+    position: relative;
     display: block;
     width: 100%;
     overflow: hidden;
@@ -180,6 +180,59 @@
 
 .image-link:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+}
+
+.image-link:hover img,
+.image-link:focus-visible img {
+    transform: scale(1.035);
+}
+
+.zoom-indicator {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: grid;
+    width: 38px;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    background: rgba(25, 23, 25, .82);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.zoom-indicator::before {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    content: "";
+}
+
+.zoom-indicator::after {
+    position: absolute;
+    top: 21px;
+    left: 22px;
+    width: 8px;
+    height: 2px;
+    transform: rotate(45deg);
+    transform-origin: left center;
+    background: currentColor;
+    content: "";
+}
+
+.zoom-indicator > span {
+    position: relative;
+    top: -5px;
+    left: -4px;
+    font-size: .7rem;
 }
 
 .image-link:focus-visible {
@@ -215,21 +268,3 @@
     color: var(--color-vert-menthe);
 }
 
-@media (max-width: 720px) {
-    .chart-card {
-        flex-direction: column;
-        gap: 20px;
-        padding: 22px;
-    }
-
-    .chart-card .economy-data-figure {
-        width: 100%;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .image-link {
-        transition: none;
-    }
-}
