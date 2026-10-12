@@ -9,6 +9,7 @@ SAÉ_FORTICHE
 Lien du site du projet sur :
  - [Github](https://h-atni.github.io/SA-56-S1A1-Groupe-3/)
  - [BitBucket](https://aconchin.bitbucket.io./)
+ - [Gitlab](https://sa-56-s1a1-groupe-3-aa17bf.gitlab.io/)
 
 ## Membres du groupe :
  - [Atni Hicham (référent)](hicham.atni@edu.univ-fcomte.fr)
