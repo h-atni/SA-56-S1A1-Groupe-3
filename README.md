@@ -85,8 +85,7 @@ Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&sh
 ou
 
 [
-<br>
-<img src="assets/verificateur-team.jpg" width="400px" alt="capture ecran sur w3c">
+  <img src="assets/validator-team.jpg" width="400px" alt="capture ecran sur w3c">
 ](https://github.com/h-atni/SA-56-S1A1-Groupe-3/blob/main/assets/validator-team.jpg)
 
 Vérification de l'éco conception de la page : [Détail ICI](https://www.ecoindex.fr/resultat/?id=70fb4e11-1992-4d98-a014-c4dc321b916c#score-details)
