@@ -101,10 +101,10 @@
     display: block;
 }
 
-.slide:nth-child(1) img { background: linear-gradient(135deg, #667eea, #764ba2); }
-.slide:nth-child(2) img { background: linear-gradient(135deg, #f6d365, #fda085); }
-.slide:nth-child(3) img { background: linear-gradient(135deg, #43e97b, #38f9d7); }
-.slide:nth-child(4) img { background: linear-gradient(135deg, #ff6a88, #ff99ac); }
+.slide:nth-child(1) img { background: linear-gradient(135deg, #FF3649, #A698FB); }
+.slide:nth-child(2) img { background: linear-gradient(135deg, #CDC1B9, #D7D9D8); }
+.slide:nth-child(3) img { background: linear-gradient(135deg, #5BFFAB, #A698FB); }
+.slide:nth-child(4) img { background: linear-gradient(135deg, #FF3649, #CDC1B9); }
 
 .slide-label {
     padding: 14px 18px 8px;
