@@ -6,9 +6,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 85%;
+    object-position: center;
     border-radius: 35px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     display: block;
 }
 
@@ -18,14 +18,13 @@
     left: 20px;
     right: 20px;
     height: 140px;
-    background: linear-gradient(to top, rgba(30, 27, 30, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
-    pointer-events: none;
 }
 
 .section-equipe {
-    background-color: #141214;
+    background-color: var(--color-background);
     padding: 60px 80px;
     text-align: center;
 }
@@ -36,7 +35,7 @@
 
 .equipe-sous-titre {
     font-family: "Permanent Marker", cursive;
-    color: beige;
+    color: var(--color-sable);
     font-size: 20px;
     margin: 0 0 4px 0;
     letter-spacing: 2px;
@@ -44,7 +43,7 @@
 
 .equipe-grand-titre {
     font-family: "Permanent Marker", cursive;
-    color: white;
+    color: var(--color-gris-clair);
     font-size: 50px;
     margin: 0;
     text-transform: uppercase;
@@ -65,19 +64,21 @@
     width: 250px;
 }
 
-.col-centre {
-    margin-top: -35px;
-}
-
 .carte-dirigeant {
     width: 250px;
     height: 330px;
     position: relative;
     overflow: hidden;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    background-color: #1a171a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: #2e2a2e;
     text-align: left;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.carte-dirigeant:hover {
+    transform: translateY(-5px);
+    background-color: #383338;
 }
 
 .carte-dirigeant img {
@@ -94,21 +95,26 @@
     left: 0;
     right: 0;
     padding: 40px 16px 16px 16px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
 .carte-info h3 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+    color: var(--color-sable);
+    font-family: var(--main-font), sans-serif;
+    font-size: 15px;
+    font-weight: 700;
     margin: 0 0 4px 0;
     letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.carte-dirigeant:hover .carte-info h3 {
+    color: var(--color-rouge-corail);
 }
 
 .role-principal {
-    color: #cccccc;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-gris-clair);
+    font-family: var(--main-font), sans-serif;
     font-size: 11px;
     letter-spacing: 1px;
     margin: 0;
@@ -116,8 +122,8 @@
 }
 
 .role-secondaire {
-    color: #888888;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #aaaaaa;
+    font-family: var(--main-font), sans-serif;
     font-size: 10px;
     margin: 2px 0 0 0;
     text-transform: uppercase;
@@ -142,21 +148,18 @@
 .btn-plus {
     display: inline-block;
     font-family: "Permanent Marker", cursive;
-    color: beige;
+    color: var(--color-sable);
     font-size: 22px;
     cursor: pointer;
     padding: 8px 24px;
-    border-bottom: 2px solid beige;
+    border-bottom: 2px solid var(--color-sable);
     margin: 30px auto 20px auto;
-    transition: color 0.2s ease, border-color 0.2s ease;
-    text-shadow: 0 0 10px rgba(245, 245, 220, 0.4);
-    user-select: none;
+    transition: color 0.2s, border-color 0.2s;
 }
 
 .btn-plus:hover {
-    color: white;
-    border-color: white;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    color: var(--color-gris-clair);
+    border-color: var(--color-gris-clair);
 }
 
 .btn-plus .txt-moins {
@@ -172,7 +175,7 @@
 }
 
 .galerie {
-    background-color: #1e1b1e;
+    background-color: var(--color-background);
     padding: 50px 20px 70px 20px;
     display: flex;
     justify-content: center;
@@ -193,7 +196,7 @@
 
 .galerie-grand-titre {
     font-family: "Permanent Marker", cursive;
-    color: white;
+    color: #D8D9D9;
     font-size: 50px;
     margin: 0 0 6px 0;
     text-transform: uppercase;
@@ -202,7 +205,7 @@
 
 .galerie-sous-titre {
     font-family: "Permanent Marker", cursive;
-    color: beige;
+    color: var(--color-sable);
     font-size: 20px;
     margin: 0;
     letter-spacing: 2px;
@@ -219,9 +222,10 @@ input[type="radio"] {
     height: 480px;
     overflow: hidden;
     text-decoration: none;
-    background-color: #0d0c0d;
+    background-color: #2e2a2e;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
 }
 
 .grande-preview img {
@@ -229,11 +233,11 @@ input[type="radio"] {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: filter 0.3s ease;
+    transition: opacity 0.2s;
 }
 
 .grande-preview:hover img {
-    filter: brightness(0.9);
+    opacity: 0.9;
 }
 
 .barre-haut {
@@ -245,16 +249,15 @@ input[type="radio"] {
     display: flex;
     align-items: center;
     padding: 12px 18px;
-    background: rgba(18, 16, 18, 0.75);
-    backdrop-filter: blur(4px);
-    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    font-family: var(--main-font), sans-serif;
 }
 
 .preview-categorie {
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: #f0f0f0;
+    color: var(--color-sable);
     text-transform: uppercase;
 }
 
@@ -268,21 +271,20 @@ input[type="radio"] {
     justify-content: space-between;
     align-items: center;
     padding: 14px 18px;
-    background: rgba(18, 16, 18, 0.75);
-    backdrop-filter: blur(4px);
-    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    font-family: var(--main-font), sans-serif;
 }
 
 .preview-nom {
-    color: #ffffff;
+    color: var(--color-gris-clair);
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .preview-role {
-    color: #cccccc;
+    color: #aaaaaa;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -295,17 +297,14 @@ input[type="radio"] {
     transform: translate(-50%, -50%);
     z-index: 3;
     font-family: "Permanent Marker", cursive;
-    font-size: 44px;
-    color: beige;
-    letter-spacing: 3px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    pointer-events: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-size: 40px;
+    color: var(--color-sable);
+    letter-spacing: 2px;
+    transition: color 0.2s;
 }
 
 .grande-preview:hover .bouton-play {
-    color: #ffffff;
-    text-shadow: 0 0 15px beige, 0 0 30px rgba(245, 245, 220, 0.9), 0 2px 10px rgba(0, 0, 0, 0.9);
+    color: var(--color-gris-clair);
 }
 
 #m1:checked ~ #preview-m1 { display: block; }
@@ -320,24 +319,26 @@ input[type="radio"] {
 .grille-membres {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    margin-top: 8px;
+    gap: 12px;
+    margin-top: 16px;
     width: 100%;
 }
 
 .carte {
-    background-color: #121012;
+    background-color: #2e2a2e;
+    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     text-align: left;
-    transition: background-color 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s, transform 0.2s;
+    border: 1px solid #3a353a;
 }
 
 .carte:hover {
-    background-color: #2a252a;
+    background-color: #383338;
+    transform: translateY(-3px);
 }
 
 .carte img {
@@ -345,8 +346,8 @@ input[type="radio"] {
     height: 135px;
     object-fit: cover;
     display: block;
-    opacity: 0.75;
-    transition: opacity 0.3s ease;
+    opacity: 0.8;
+    transition: opacity 0.2s;
 }
 
 .carte:hover img {
@@ -355,18 +356,18 @@ input[type="radio"] {
 
 .carte span {
     display: block;
-    color: #e5e5e5;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-gris-clair);
+    font-family: var(--main-font), sans-serif;
     font-size: 11px;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 8px 10px 10px 10px;
-    transition: color 0.3s ease;
+    margin: 10px 12px;
+    transition: color 0.2s;
 }
 
 .carte:hover span {
-    color: #ffffff;
+    color: var(--color-rouge-corail);
 }
 
 #m1:checked ~ .grille-membres label[for="m1"],
@@ -377,7 +378,8 @@ input[type="radio"] {
 #m6:checked ~ .grille-membres label[for="m6"],
 #m7:checked ~ .grille-membres label[for="m7"],
 #m8:checked ~ .grille-membres label[for="m8"] {
-    outline: 2px solid beige;
+    outline: 2px solid var(--color-sable);
+    background-color: #383338;
 }
 
 #m1:checked ~ .grille-membres label[for="m1"] img,
@@ -399,5 +401,27 @@ input[type="radio"] {
 #m6:checked ~ .grille-membres label[for="m6"] span,
 #m7:checked ~ .grille-membres label[for="m7"] span,
 #m8:checked ~ .grille-membres label[for="m8"] span {
-    color: beige;
+    color: var(--color-sable);
+}
+
+.equipe-projets {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.lien-projets {
+    font-family: var(--main-font), sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-vert-menthe);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.lien-projets:hover {
+    color: var(--color-sable);
+}
+
+footer a:hover {
+    color: var(--color-sable);
 }
