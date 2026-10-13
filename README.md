@@ -80,7 +80,7 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&sho
 ### Page Equipe
 **Auteur : Ben Ahmed Louay**
 
-Vérification W3C : [Détail ICI]([https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fh-atni.github.io%2FSA-56-S1A1-Groupe-3%2Fteam.html))
+Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fh-atni.github.io%2FSA-56-S1A1-Groupe-3%2Fteam.html)
 
 ou
 
