@@ -78,13 +78,23 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&sho
 <img src="assets/verificateur_W3C.png" width="400px" alt="capture ecran sur w3c">
 
 ### Page Equipe
-**Auteur : Nom Prénom**
+**Auteur : Ben Ahmed Louay**
 
-Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
+Vérification W3C : [Détail ICI]([https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fh-atni.github.io%2FSA-56-S1A1-Groupe-3%2Fteam.html))
 
+ou
+
+[
 <br>
 <img src="assets/verificateur_W3C.png" width="400px" alt="capture ecran sur w3c">
+](https://github.com/h-atni/SA-56-S1A1-Groupe-3/blob/main/assets/validator-team.jpg)
 
+Vérification de l'éco conception de la page : [Détail ICI](
+
+ou
+
+<img src="assets/eco-conception-team.jpg" width="400px" alt="capture ecran sur EcoIndex">
+<img src="assets/Ecoindex.png" width="400px" alt="capture ecran sur EcoIndex">
 
 ## Répartition du travail
 
