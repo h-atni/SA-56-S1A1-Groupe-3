@@ -67,6 +67,7 @@ Vérification de l'éco conception de la page : [Détail ICI](https://www.ecoind
 ou
 
 <img src="assets/eco-conception-economy.jpg" width="400px" alt="capture ecran sur EcoIndex">
+<img src="assets/Ecoindex.png" width="400px" alt="capture ecran sur EcoIndex">
 
 ### Page réalisation
 **Auteur : Nom Prénom**
